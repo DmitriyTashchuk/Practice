@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Обчислення суми двох чисел</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Montserrat, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            margin-top: 10px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: rgb(201, 235, 250);
+            border-radius: 10px;
+            padding:5px 8px 5px 8px;
+        }
+        #x, #y{
+            width: 150px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body bgcolor="white">
+    <div style="padding: 30px; background-color: rgb(169, 225, 251); border-radius: 15px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <h2>Обчислення суми двох чисел</h2>
+        <form method="get" action="index.html" >
+            <div class="form-group">
+                <label for="x">Число x:</label>
+                <input type="number" id="x" name="x" size="11">
+            </div>
+
+            <div class="form-group">
+                <label for="y">Число y:</label>
+                <input type="number" id="y" name="y" size="11">
+            </div>
+
+            <input type="button" value="Обчислити" onclick="calculate()">
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function calculate() {
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+
+            x = Number(x);
+            y = Number(y);
+
+            let sum = x + y;
+
+            alert(`Сума двох чисел дорівнює ${sum}`);
+        }
+    </script>
+</body>
+</html>

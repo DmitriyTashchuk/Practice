@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестування</title>
+</head>
+<body>
+    <h1>Тестування</h1>
+
+    <table>
+        <tr>
+            <th>x</th>
+            <th>y</th>
+            <th>x AND y</th>
+            <th>Ваша відповідь</th>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td>
+                <select onchange="checkAnswer(this)">
+                    <option value=""></option>
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>false</td>
+            <td></td>
+            <td>
+                <select onchange="checkAnswer(this)">
+                    <option value=""></option>
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td>
+                <select onchange="checkAnswer(this)">
+                    <option value=""></option> 
+                    <option value="true">true</option> 
+                    <option value="false">false</option> 
+                </select> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td>false</td> 
+            <td>false</td> 
+            <td></td> 
+            <td> 
+                <select onchange="checkAnswer(this)"> 
+                    <option value=""></option> 
+                    <option value="true">true</option> 
+                    <option value="false">false</option> 
+                </select> 
+            </td> 
+        </tr> 
+    </table>
+
+    <script type="text/javascript">
+        function checkAnswer(select) {
+            let tr = select.parentNode.parentNode;
+            let x = tr.cells[0].textContent === "true";
+            let y = tr.cells[1].textContent === "true";
+            let result = x && y;
+            let answer = select.value === "true";
+            
+            if (result === answer) {
+                tr.cells[2].textContent = "Вірно";
+                tr.cells[2].style.color = "green";
+            } else {
+                tr.cells[2].textContent = "Невірно";
+                tr.cells[2].style.color = "red";
+            }
+        }
+    </script>
+
+    </body>
+
+    </html>

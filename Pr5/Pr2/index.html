@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Quotes</title>
+</head>
+<body>
+    <script>
+        var authors = [
+            {name: "В. Мономах", quote: "«Коли щось умієте, того не забувайте, а чого не вмієте — то того учітесь... »"},
+            {name: "Г. Сковорода", quote: "Безперервно думай, щоб пізнати себе."},
+            {name: "Т. Шевченко", quote: "Борітеся — поборете!"},
+            {name: "Сенека", quote: "Люблять батьківщину не за те, що вона велика, а за те, що своя."},
+            {name: "Овідій", quote: "І дим батьківщини солодкий."}
+        ];
+
+        for (var i = 0; i < authors.length; i++) {
+            var button = document.createElement("button");
+            button.innerHTML = authors[i].name;
+            button.onclick = (function(i) {
+                return function() {
+                    alert(authors[i].quote);
+                }
+            })(i);
+            document.body.appendChild(button);
+        }
+    </script>
+</body>
+</html>

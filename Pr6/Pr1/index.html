@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кольори фону</title>
+</head>
+<body>
+    <h1>Кольори фону</h1>
+
+    <label for="colors">Виберіть колір фону:</label>
+    <select id="colors" onchange="changeColor()">
+        <option value="brown">Коричневий</option>
+        <option value="white">Білий</option>
+        <option value="black">Чорний</option>
+    </select>
+
+    <script type="text/javascript">
+        function changeColor() {
+            let color = document.getElementById("colors").value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
