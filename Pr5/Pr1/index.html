@@ -4,6 +4,14 @@
     <title>Business Cards</title>
 </head>
 <body>
+    <style>
+        tr{
+            background-color: aliceblue;
+        }
+        body{
+            font-family: sans-serif;
+        }
+    </style>
     <script>
         var name = prompt('Input name','');
 var position = prompt('Input position','');
@@ -11,8 +19,8 @@ var phone = prompt('Input phone','');
 
 var visitcard = '<TABLE width="100%" border="0">' +
     '<TR>' +
-    '<TD align="CENTER" valign="CENTER">' +
-    '<IMG src="image.png" style="width: 170px; height: 200px;">' +
+    '<TD align="LEFT" valign="LEFT">' +
+    '<IMG src="image.png" style="width: 170px; height: 200px; margin: 5px 10px 5px 10px">' +
     '</TD>' +
     '<TD align="CENTER">' +
     '<B>' + name + '</B><BR>' +
